@@ -23,11 +23,22 @@
     <link rel="stylesheet" type="text/css" href="css/social.css">
 
     <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="img/logo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class=sh-bar>
         <div class="sh-container">
@@ -121,7 +132,15 @@
         </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js">
         </script>
+<script>
+        $(window).on('load', function () {
+      $('#preloader-active').delay(450).fadeOut('slow');
+      $('body').delay(450).css({
+        'overflow': 'visible'
+      });
+    });
 
+</script>
 
 </body>
 
